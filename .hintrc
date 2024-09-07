@@ -1,0 +1,21 @@
+{
+  "extends": [
+    "development"
+  ],
+  "browserslist": [
+    "> 1%",
+    "last 50 versions"
+  ],
+  "hints": {
+    "compat-api/css": "off",
+    "compat-api/html": "off",
+    "no-inline-styles": "off",
+    "axe/forms": "off",
+    "axe/name-role-value": [
+      "default",
+      {
+        "button-name": "off"
+      }
+    ]
+  }
+}
