@@ -1,22 +1,6 @@
 @tailwind base;
 @tailwind components;
-input:focus{
-    outline-style: solid;
-    outline-width: 0.15rem;
-    @apply outline-emerald-600 ;
-}
-.sr-only {
-    display: none;
-}
 
-html {
-    padding: 0;
-    margin: 0;
-    font-family: 'IRANSansX';
-    @apply font-IRANSansX;
-    /*overflow-y: auto !important;*/
-    /*overflow-inline: hidden;*/
-}
 @font-face {
     font-family: IRANSansX;
     font-style: normal;
@@ -51,86 +35,4 @@ html {
     font-weight: normal;
     src: url("../Webfonts/fonts/woff/IRANSansX-Regular.woff") format("woff");
 }
-
-.fa-num {
-    -moz-font-feature-settings: "ss02";
-    -webkit-font-feature-settings: "ss02";
-    font-feature-settings: "ss02";
-}
-
-.swal2-title,
-.swal2-moda {
-    font-family: IRANSansX !important;
-}
-.w-tc-editor[data-color-mode*="light"],
-[data-color-mode*="light"] .w-tc-editor,
-[data-color-mode*="light"] .w-tc-editor-var,
-body[data-color-mode*="light"] {
-    --color-fg-default: #ffaa00 !important;
-    --color-canvas-subtle: #ff0024;
-    --color-prettylights-syntax-comment: #82253b;
-    --color-prettylights-syntax-entity-tag: #21ff63 !important;
-    --color-prettylights-syntax-entity: #8250df;
-    --color-prettylights-syntax-sublimelinter-gutter-mark: #fafafa !important;
-    --color-prettylights-syntax-constant: #ff0aa1 !important;
-    --color-prettylights-syntax-string: #1ebfff !important;
-    --color-prettylights-syntax-keyword: #cf222e;
-    --color-prettylights-syntax-markup-bold: #a2960c !important;
-}
-
-.dashed {
-    background: repeating-linear-gradient(-45deg, orange 1px, orange 5px, transparent 4px, transparent 12px);
-}
-
-.hover-effect:hover * {
-    color: orange;
-}
-.hover-effect:hover {
-    color: orange;
-}
-.hover-effect svg:hover {
-    color: orange;
-}
-.act {
-    color: rgb(22, 158, 111);
-}
-.nact {
-    color: orange;
-}
-.lds-ring {
-    display: inline-block;
-    position: relative;
-    width: 3rem;
-    height: 3rem;
-  }
-  .lds-ring div {
-    box-sizing: border-box;
-    display: block;
-    position: absolute;
-    width: 32px;
-    height: 32px;
-    margin: 8px;
-    border: 4px solid orangered;
-    border-radius: 50%;
-    animation: lds-ring 1.2s cubic-bezier(0.5, 0, 0.5, 1) infinite;
-    border-color: orangered transparent transparent transparent;
-  }
-  .lds-ring div:nth-child(1) {
-    animation-delay: -0.45s;
-  }
-  .lds-ring div:nth-child(2) {
-    animation-delay: -0.3s;
-  }
-  .lds-ring div:nth-child(3) {
-    animation-delay: -0.15s;
-  }
-  @keyframes lds-ring {
-    0% {
-      transform: rotate(0deg);
-    }
-    100% {
-      transform: rotate(360deg);
-    }
-  }
-  
 @tailwind utilities;
