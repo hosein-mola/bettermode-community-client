@@ -1,4 +1,3 @@
-import { setActiveMenu } from '@/actions/menuSlice'
 import { useEffect } from 'react'
 import type { TypedUseSelectorHook } from 'react-redux'
 import { useDispatch, useSelector } from 'react-redux'
@@ -13,7 +12,6 @@ export const useSetActiveMenu = () => {
     const dispatch = useAppDispatch();
     const location = useLocation();
     useEffect(() => {
-        dispatch(setActiveMenu({ path: location.pathname }));
     }, []);
 
     return [location];

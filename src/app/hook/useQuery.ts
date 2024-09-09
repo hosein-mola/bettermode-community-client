@@ -1,4 +1,4 @@
-import { signOut } from '@/app/states/authSlice';
+import { signOut } from '@/app/state/authSlice';
 import api from '@/app/api/apiConfig';
 import { delay } from '@/app/function/delay';
 import { useAppDispatch, useAppSelector } from '@/app/function/hooks';

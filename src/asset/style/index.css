@@ -35,4 +35,8 @@
     font-weight: normal;
     src: url("../Webfonts/fonts/woff/IRANSansX-Regular.woff") format("woff");
 }
+
+.cont {
+    height: calc("100vh - 3.5rem");
+}
 @tailwind utilities;
