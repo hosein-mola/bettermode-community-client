@@ -1,25 +1,66 @@
-import React from 'react'
-import { IoIosGrid, IoIosListBox, } from 'react-icons/io'
+import { gql, useQuery } from "@apollo/client";
+import React from "react";
+import { IoIosGrid, IoIosListBox } from "react-icons/io";
 
 function home() {
+    const FILMS_QUERY = gql`
+        query {
+            tokens(networkDomain: "community.bettermode.io") {
+                accessToken
+                role {
+                    name
+                    scopes
+                }
+                member {
+                    id
+                    name
+                }
+            }
+        }
+    `;
+
+    const { data, loading, error } = useQuery(FILMS_QUERY);
+    if (loading) return "Loading...";
+    if (error) return <pre>{error.message}</pre>;
+
     return (
-        <>
-            <div className='h-12 bg-blue-400'></div>
-            <div className='h-12 bg-red-400'></div>
-            <div className='overflow-scroll mt-2 w-8/12 h-screen p-4  flex-grow bg-orange-500'>
-                <div className='h-96 w-full bg-primary'></div>
-                <div className='h-96 w-full'></div>
-                <div className='h-96 w-full'></div>
-                <div className='h-96 w-full bg-green-500'></div>
-                <div className='h-96 w-full bg-blue-500'></div>
-                <div className='h-96 w-full bg-red-500'></div>
-                <div className='h-96 w-full bg-yellow-500'></div>
-                <div className='min-h-[24rem] w-full relative bg-blue-500 shadow-xl shadow-red-900 '>
-                    <div className=' bottom-0 w-full h-12 absolute border-2 border-yellow-200  bg-red-400 '></div>
+        <div className="flex max-h-screen h-screen w-full flex-col items-center overflow-hidden ">
+            <div className="flex min-h-[3.5rem] w-full items-center border-b bg-gradient-to-r from-teal-800 via-sky-700 to-sky-500 px-4 text-2xl font-medium text-white">
+                Spaces
+            </div>
+            <div className="h-14 w-full border-b bg-white"></div>
+            <div className="mt-2 flex w-full flex-row gap-2 overflow-hidden md:w-full lg:w-11/12  2xl:w-7/12 md:p-8 bg-w">
+                <div className="hidden w-2/12 md:flex flex-col gap-4 text-center">
+                    <div className="text-xl font-bold text-primary drop-shadow-sm">Spaces</div>
+                    <hr className="w-full" />
+                </div>
+                <div className="grid max-h-screen  w-full grid-cols-3 gap-4 overflow-y-scroll   bg-white rounded-lg  p-4 shadow-lg shadow-blue-300 md:w-10/12">
+                    <div className="h-96  bg-primary"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="h-96  bg-green-500"></div>
+                    <div className="col-span-3 justify-center items-center flex font-bold">More</div>
                 </div>
             </div>
-        </>
-    )
+        </div>
+    );
 }
 
-export default home
+export default home;

@@ -10,10 +10,12 @@
         "preview": "vite preview"
     },
     "dependencies": {
+        "@apollo/client": "^3.11.8",
         "@hookform/resolvers": "^2.9.10",
         "@reduxjs/toolkit": "^1.9.1",
         "axios": "^1.2.5",
         "framer-motion": "^10.12.12",
+        "graphql": "^16.9.0",
         "leaflet": "^1.9.4",
         "nanoid": "^4.0.2",
         "persian-date": "^1.1.0",

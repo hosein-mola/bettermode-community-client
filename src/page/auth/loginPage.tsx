@@ -3,7 +3,7 @@ import { IoLogoApple, IoLogoGoogle, IoMdLogIn } from "react-icons/io";
 
 const LoginPage = () => {
     return (
-        <div className='w-full flex-grow bg-slate-100 flex justify-center items-center'>
+        <div className='w-full flex-grow h-screen bg-slate-100 flex justify-center items-center'>
             <div className='flex flex-row gap-4 bg-white w-full justify-center md:w-10/12 lg:w-8/12 xl:w-7/12 2x:w-7/12  shadow-2xl shadow-blue-400 min-h-screen h-auto lg:min-h-[40dvh] xl:min-h-[50dvh]  rounded-2xl '>
                 <div className=' lg:w-6/12 w-full gap-4 border-r px-8 py-6 flex-grow flex flex-col items-center justify-between'>
                     <div className='text-5xl font-bold h-auto flex items-center text-black'>
