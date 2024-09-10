@@ -3,25 +3,6 @@ import React from "react";
 import { IoIosGrid, IoIosListBox } from "react-icons/io";
 
 function home() {
-    const FILMS_QUERY = gql`
-        query {
-            tokens(networkDomain: "community.bettermode.io") {
-                accessToken
-                role {
-                    name
-                    scopes
-                }
-                member {
-                    id
-                    name
-                }
-            }
-        }
-    `;
-
-    const { data, loading, error } = useQuery(FILMS_QUERY);
-    if (loading) return "Loading...";
-    if (error) return <pre>{error.message}</pre>;
 
     return (
         <div className="flex max-h-screen h-screen w-full flex-col items-center overflow-hidden ">
