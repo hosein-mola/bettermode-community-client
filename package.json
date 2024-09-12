@@ -13,6 +13,7 @@
         "@apollo/client": "^3.11.8",
         "@hookform/resolvers": "^2.9.10",
         "@reduxjs/toolkit": "^1.9.1",
+        "@tailwindcss/line-clamp": "^0.4.4",
         "axios": "^1.2.5",
         "framer-motion": "^10.12.12",
         "graphql": "^16.9.0",

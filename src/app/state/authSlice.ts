@@ -2,22 +2,14 @@ import { createSlice } from '@reduxjs/toolkit';
 
 interface InitState {
     isLoggedIn: boolean
-    token: string | null,
-    userInfo: {
-        firstName: string | null,
-        lastName: string | null
-    },
-    userRoles: Array<String>
+    token: string,
+    member: Record<string, string>,
 }
 
 const _initialState: InitState = {
     isLoggedIn: false,
-    token: null,
-    userInfo: {
-        firstName: null,
-        lastName: null
-    },
-    userRoles: []
+    token: '',
+    member: {}
 }
 
 export const authSlice = createSlice({
@@ -25,13 +17,15 @@ export const authSlice = createSlice({
     initialState: _initialState,
     reducers: {
         signIn: (state, action) => {
-            const { result } = action.payload;
-
+            const { accessToken, member } = action.payload;
+            state.isLoggedIn = true;
+            state.member = member;
+            state.token = accessToken;
         },
         signOut: (state) => {
             state.isLoggedIn = false;
             state.token = "";
-            state.userRoles = []
+            state.member = {};
         },
     }
 });
