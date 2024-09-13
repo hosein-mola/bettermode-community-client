@@ -3,12 +3,12 @@
 A ReactJS application built using the BetterMode Community Client, enabling users to interact with a community-driven platform. The app utilizes GraphQL and Apollo Client for data fetching and state management.
 
 ## Table of Contents
+- [Demo](https://bettermode-community-client.vercel.app/)
 - [Features](#features)
 - [Installation](#installation)
 - [Screenshots](#screenshots)
 - [Technologies](#technologies)
 - [License](#license)
-
 ## Features
 - User sign-in using their community member account.
 - List community spaces and view associated posts.
