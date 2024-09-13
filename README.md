@@ -18,6 +18,7 @@ A ReactJS application built using the BetterMode Community Client, enabling user
 ## Screenshots
 ![Login Screen](https://github.com/user-attachments/assets/28ac7296-d81b-44f4-8703-315eb8299c1c)
 ![Screenshot 2024-09-13 184325](https://github.com/user-attachments/assets/23cd2135-f3ca-49fd-975b-c5675129a21d)
+![Screenshot 2024-09-13 184741](https://github.com/user-attachments/assets/21619997-66d8-4e6f-b821-7348a2c1dd39)
 
 ## Installation
 To get started with the project, clone the repository and install dependencies.
