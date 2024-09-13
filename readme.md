@@ -1,22 +1,28 @@
-# نرم افزار پروژه سد
+# BetterMode Community Client
 
--   برنامه توسط ابزار vite ساخته شده است
--   برای اطلاعات بیشتر فایل package.json مطالعه شود
+A ReactJS application built using the BetterMode Community Client, enabling users to interact with a community-driven platform. The app utilizes GraphQL and Apollo Client for data fetching and state management.
 
-# پیش نیاز ها
+## Table of Contents
+- [Features](#features)
+- [Installation](#installation)
+- [Usage](#usage)
+- [Screenshots](#screenshots)
+- [Technologies](#technologies)
+- [Contributing](#contributing)
+- [License](#license)
 
-1. node v18.10.0
-2. yarn 1.22.19
-3. typescript 4.9.3
-4. vite 4.0.0
-5. rollup-plugin-visualize ^5.9.0
+## Features
+- User sign-in using their community member account.
+- List community spaces and view associated posts.
+- View detailed content of individual posts.
+- Add reactions to posts using GraphQL mutations.
+- Integration with Apollo Client for managing GraphQL data.
 
-# استک نرم افزاری
+## Installation
 
-1. react 18
-2. tailwincss
-3. redux-toolkit
-4. nivo chart
-5. axios client
-6. react query
-# faba
+To get started with the project, clone the repository and install dependencies.
+
+```bash
+git clone https://github.com/yourusername/bettermode-community-client.git
+cd bettermode-community-client
+npm install
