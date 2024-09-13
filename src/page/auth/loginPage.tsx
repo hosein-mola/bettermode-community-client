@@ -147,7 +147,7 @@ const LoginPage = () => {
                     </div>
                 </form>
                 <div className="hidden flex-col items-center justify-center gap-4 rounded-2xl py-2 font-bold lg:flex lg:w-6/12">
-                    <img alt="side-image" width={"45%"} height={"100%"} src="/public/side.svg" />
+                    <img alt="side-image" width={"45%"} height={"100%"} src="/side.svg" />
                     <div className="flex flex-col gap-2">
                         <h1 className="text-center text-3xl text-primary">Your Circle, Your Strength.</h1>
                         <h1 className="text-center text-2xl text-black">bettermode community</h1>
