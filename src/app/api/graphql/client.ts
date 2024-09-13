@@ -1,5 +1,6 @@
 // client.js
 import { ApolloClient, InMemoryCache, HttpLink, ApolloLink } from '@apollo/client';
+import { persistCache } from 'apollo-cache-persist';
 
 // Create an HTTP link:
 const httpLink = new HttpLink({
@@ -24,7 +25,16 @@ const authLink = new ApolloLink((operation, forward) => {
 // Create Apollo Client with links
 const client = new ApolloClient({
     link: authLink.concat(httpLink),
-    cache: new InMemoryCache(),
+    cache: new InMemoryCache({
+        typePolicies: {
+            posts: {
+                keyFields: ["spaceId"], // Define key field for caching
+            },
+            spaces: {
+                keyFields: ["id"], // Define key field for caching
+            }
+        },
+    }),
 });
 
 export default client;

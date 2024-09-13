@@ -3,6 +3,7 @@ import authSlice from '@/app/state/authSlice';
 import { combineReducers, configureStore } from '@reduxjs/toolkit';
 import { FLUSH, PAUSE, PERSIST, PURGE, REGISTER, REHYDRATE, persistReducer, persistStore } from 'redux-persist';
 import storage from 'redux-persist/lib/storage';
+import postsSlice from './postsSlice';
 
 const persistConfig = {
     key: 'root',
@@ -12,6 +13,7 @@ const persistConfig = {
 
 const _reducers = combineReducers({
     auth: authSlice,
+    posts: postsSlice
 });
 
 const persistedReducer = persistReducer(persistConfig, _reducers);
